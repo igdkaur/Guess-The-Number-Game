@@ -1,3 +1,8 @@
+
+// Variable for store the correct random number 
+let correctNumber = getRandomNumber();
+
+
 window.onload = function() {
   document.getElementById("number-submit").addEventListener("click", playGame);
   document.getElementById("restart-game").addEventListener("click", initGame)
@@ -8,7 +13,7 @@ window.onload = function() {
 */
 function playGame(){
   let numberGuess = document.getElementById("number-guess").value;
-  
+
 }
 
 /**
@@ -39,7 +44,7 @@ document.getElementById("result").innerHTML = "";
 * HINT: Use Math.random 
 */
 function getRandomNumber(){
-// *CODE GOES BELOW HERE *
+return Math.floor((Math.random() * 100) + 1);
 }
 
 /**
