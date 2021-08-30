@@ -7,7 +7,8 @@ window.onload = function() {
 * Functionality for playing the whole game
 */
 function playGame(){
-// *CODE GOES BELOW HERE *
+  let numberGuess = document.getElementById("number-guess").value;
+  
 }
 
 /**
