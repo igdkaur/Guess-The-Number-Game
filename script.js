@@ -13,6 +13,13 @@ window.onload = function() {
 */
 function playGame(){
   let numberGuess = document.getElementById("number-guess").value;
+  console.log("correctNumber", correctNumber)
+  if(numberGuess > correctNumber)
+  console.log("to high")
+  else if(numberGuess <  correctNumber)
+  console.log("to low")
+  else 
+  console.log("okay")
 
 }
 
@@ -45,6 +52,8 @@ document.getElementById("result").innerHTML = "";
 */
 function getRandomNumber(){
 return Math.floor((Math.random() * 100) + 1);
+
+
 }
 
 /**
