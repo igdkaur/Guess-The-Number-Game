@@ -41,6 +41,11 @@ function displayResult(numberGuess){
 * HINT: reset the correctNumber, guesses, and HTML content
 */
 function initGame(){
+  correctNumber = getRandomNumber();
+  document.getElementById("result").innerHTML="";
+  guesses = [];
+  displayHistory();
+
 // *CODE GOES BELOW HERE *
 }
 
