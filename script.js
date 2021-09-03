@@ -6,6 +6,7 @@ let correctNumber = getRandomNumber();
 window.onload = function() {
   document.getElementById("number-submit").addEventListener("click", playGame);
   document.getElementById("restart-game").addEventListener("click", initGame)
+  
 }
 
 /**
@@ -15,12 +16,11 @@ function playGame(){
   let numberGuess = document.getElementById("number-guess").value;
   console.log("correctNumber", correctNumber)
   if(numberGuess > correctNumber)
-  console.log("to high")
+  showNumberAbove();
   else if(numberGuess <  correctNumber)
-  console.log("to low")
+  showNumberBelow();
   else 
-  console.log("okay")
-
+  showYouWon()
 }
 
 /**
@@ -109,7 +109,7 @@ const text = "Awesome job, you got it!"
  * HINT: Use the 'won' and text parameters 
  */
 // *CODE GOES BELOW HERE *
-
+let dialog = getDialog('won', text);
 document.getElementById("result").innerHTML = dialog;
 }
 
@@ -121,7 +121,7 @@ const text = "Your guess is too high!"
  * HINT: Use the 'warning' and text parameters 
  */
 // *CODE GOES BELOW HERE *
-
+let dialog = getDialog('warning', text);
 document.getElementById("result").innerHTML = dialog;
 }
 
@@ -133,6 +133,6 @@ const text = "Your guess is too low!"
  * HINT: Use the 'warning' and text parameters 
  */
 // *CODE GOES BELOW HERE *
-
+let dialog = getDialog('warning', text);
 document.getElementById("result").innerHTML = dialog;
 }
