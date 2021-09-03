@@ -1,7 +1,7 @@
 
 // Variable for store the correct random number 
 let correctNumber = getRandomNumber();
-
+let guesses= [];
 
 window.onload = function() {
   document.getElementById("number-submit").addEventListener("click", playGame);
@@ -15,19 +15,23 @@ window.onload = function() {
 function playGame(){
   let numberGuess = document.getElementById("number-guess").value;
   console.log("correctNumber", correctNumber)
-  if(numberGuess > correctNumber)
-  showNumberAbove();
-  else if(numberGuess <  correctNumber)
-  showNumberBelow();
-  else 
-  showYouWon()
+  displayResult(numberGuess);
+  saveGuessHistory(numberGuess);
+  
 }
 
 /**
 * Show the result for if the guess it too high, too low, or correct
 * HINT: Use if, else if, else statement 
 */
-// *CODE GOES BELOW HERE *
+function displayResult(numberGuess){
+  if(numberGuess > correctNumber)
+  showNumberAbove();
+  else if(numberGuess <  correctNumber)
+  showNumberBelow();
+  else 
+  showYouWon();
+}
 
 
 
@@ -61,8 +65,10 @@ return Math.floor((Math.random() * 100) + 1);
 * HINT: Search Google "append to array in javascript"
 * HINT: Use the guesses variable
 */
+
 function saveGuessHistory(guess) {
-// *CODE GOES BELOW HERE *
+  guesses.push(guess);
+console.log("array",guesses);
 }
 
 /**
